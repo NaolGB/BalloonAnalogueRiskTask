@@ -1,0 +1,6 @@
+env/
+trash/
+util/
+utils/
+__pycache__/
+config.py

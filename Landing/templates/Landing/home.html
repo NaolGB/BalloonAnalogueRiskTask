@@ -1,0 +1,58 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+
+<div class="d-flex justify-content-evenly">
+    <div class="card m-2">
+        <div class="card-body">
+            <p class="card-text">
+                BART where you can increase balloon size only by factor of 1. <a href="{% url 'landing-about' %}">Read more</a> about Standard BART.
+            </p>
+            <a class="card-link" href="{% url 'bart-home' %}">
+                    Play Standard Bart
+            </a>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <p class="card-text">
+                BART where you can increase balloon size by multiple factors. <a href="{% url 'landing-about' %}">Read more</a> about Modified BART.
+            </p>
+            <a class="card-link" href="{% url 'bart-modified-home' %}">
+                    Play Modified Bart
+            </a>
+        </div>
+    </div>
+</div>
+
+<h1 class="m-5">Standard BART</h1>
+
+<div>
+    {% autoescape off %}
+        {{ fig1Learning | safe }}
+    {% endautoescape %}
+</div>
+
+<div>
+    {% autoescape off %}
+        {{ fig3RiskDistribution | safe }}
+    {% endautoescape %}
+</div>
+
+<h1 class="m-5">Modified BART</h1>
+
+<div>
+    {% autoescape off %}
+        {{ fig4Learning | safe }}
+    {% endautoescape %}
+</div>
+
+<div>
+    {% autoescape off %}
+        {{ fig6RiskDistribution | safe }}
+    {% endautoescape %}
+</div>
+
+
+{% endblock %}

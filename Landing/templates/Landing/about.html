@@ -1,0 +1,48 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+
+<div>
+    <h1>About</h1>
+    <br>
+    <br>
+    <p>Balloon Analogue Risk Task (BART) is a game that measures risk-taking behavior. 
+        It relates to the real-world risk behaviors of players and can be used to study risk behavior in alcohol use, gambling, and other activities. 
+        The main characteristic of players measured by BART is the risk-taking propensity, which is often used in research. Read more about <a href="https://www.impulsivity.org/measurement/bart/" target="_blank">BART</a> and <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0014083" target="_blank">its reliability</a>.
+    <br>
+    <br>
+<h2>Types</h2>
+The basic BART game goes as follows<br>
+<ul>
+    <li>Players will be provided with a balloon and two actions per trial – the actions are pump (inflate) and cash out</li>
+    <li>If the player decides to pump the balloon the amount of money they can cash out increases, but, so does the probability that the balloon pops on the current or coming pumps</li>
+    <li>If the player decides to cash out, they will be rewarded the amount of money they accumulated by pumping</li>
+    <li>If the balloon pops before the player cashes out, the player loses all the money accumulated in that trial, but the total amount from the previous trials is not decreased</li>
+    <li>Players will play in multiple trials (10) in this implementation</li>
+</ul>
+<br>
+<br>
+
+<h2>Standard vs. Modified BART</h2>
+Standard BART is an implementation of BART where players can only pump their balloons by a factor of 1. In Modified BART, players have the chance to pump the balloon by multiple factors. At once, the maximum of which is the remaining number of pumps provided in the game.
+<br>
+<br>
+
+<h2>Data</h2>
+In this game, no personal data will be collected. Data collected includes the number of trials, the number of rewards accumulated, total reward accumulated, the number of trials completed, the number of pumps per pump (in modified BART), the current reward for the trial, and the state of the game (has the balloon popped, has the player cashed out).
+<br>
+The data is not passed to any third party and is stored and processed to show the distribution of actions and results from all players. The data collected in these games is not used for research or any other purposes except the display of overall information on the <a href="{% url 'landing-home' %}">home</a> page of this website.
+<br>
+<br>
+
+<h2>Reward</h2>
+All the rewards in this game are virtual. No amount of money or any meaningful reward, physically or electronically, will be given as a reward for playing the game or collecting as part of the game.
+<br>
+<br>
+
+Thanks for playing. Have fun!
+</p>
+
+</div>
+
+{% endblock %}

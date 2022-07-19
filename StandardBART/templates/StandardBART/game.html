@@ -1,0 +1,36 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+
+<div class="col">
+    <div class="d-flex justify-content-around">
+        <div class="">
+            <p>Total collected: ${{trial.experiment.totalCollected}}</p>
+        </div>
+        <div class="">
+            <p>Last collected:  ${{trial.experiment.lastCollected}}</p>
+        </div>
+    </div>
+
+    <div class="row" style="height: 384px;">
+        <div class="balloonContainer d-flex justify-content-center align-items-center">
+            <div id="balloon"></div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly">
+        <div class="">
+            <a href="{% url 'bart-pump' trial.id %}">
+                    Pump
+            </a>
+        </div>
+        <div class="">
+            <a href="{% url 'bart-cashOut' trial.id %}">
+                    Cash out
+            </a>
+        </div>
+    </div>
+
+    
+</div>
+
+{% endblock %}
