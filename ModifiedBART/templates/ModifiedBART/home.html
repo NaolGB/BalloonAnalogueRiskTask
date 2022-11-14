@@ -8,20 +8,22 @@
     <p>The goal of this game is to earn as much money as possible</p>
 </strong>
 
-<ol>
-    <li>You will be provided with a balloon and two actions per trial – the actions are pump (inflate) and cash out</li>
-    <li>You have the option to increase the number of pumps you make at a time by inserting the number in the provided box, however you can only do a total of 128 pumps per trial</li>
-    <li>If you decide to pump the balloon, the balloon will inflate by the amount you provided and the amount of money you can cash out increases by the same factor. But, so <strong> does the probability that the balloon pops on the current or coming pumps</strong></li>
-    <li>If you decide to cash out, the amount of money you accumulated by pumping in the trial will be trasferred to the total reward which you will be able to take once all trials are completed</li>
-    <li>If the balloon pops before you cash out, you will loses all the money accumulated in that trial, but the total amount from the previous trials is not decreased</li>
-    <li>you will play for 10 trials</li>
-</ol>
-<br>
-<br>
+<div>
+    <ol>
+        <li>You will be provided with a balloon and two actions per trial – the actions are pump (inflate) and cash out</li>
+        <li>You have the option to increase the number of pumps you make at a time by inserting the number in the provided box, however you can only do a total of 128 pumps per trial</li>
+        <li>If you decide to pump the balloon, the balloon will inflate by the amount you provided and the amount of money you can cash out increases by the same factor. But, so <strong> does the probability that the balloon pops on the current or coming pumps</strong></li>
+        <li>If you decide to cash out, the amount of money you accumulated by pumping in the trial will be trasferred to the total reward which you will be able to take once all trials are completed</li>
+        <li>If the balloon pops before you cash out, you will loses all the money accumulated in that trial, but the total amount from the previous trials is not decreased</li>
+        <li>you will play for 10 trials</li>
+    </ol>
+</div>
 
-<a class="btn btn-outline-dark" role="button" href="{% url 'bart-modified-createExperiment' %}" >
-        Start Playing
-</a>
+<div class='pt-3'>
+    <a class="btn btn-outline-dark" role="button" href="{% url 'bart-modified-createExperiment' %}" >
+            Start Playing
+    </a>
+</div>
 
 
 {% endblock %}

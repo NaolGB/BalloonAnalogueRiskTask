@@ -1,11 +1,18 @@
 {% extends 'main.html' %} 
+{% block title %}
+<div class='display-1'>
+    About
+</div>
+<div class='fs-6 fw-light pb-3'>
+    Balloon Analogue Risk Task
+</div>
+<div class='d-flex mb-3 gap-3 pt-5'>
+    
+</div>
+{% endblock title %}
 
 {% block content %}
-
 <div>
-    <h1>About</h1>
-    <br>
-    <br>
     <p>Balloon Analogue Risk Task (BART) is a game that measures risk-taking behavior. 
         It relates to the real-world risk behaviors of players and can be used to study risk behavior in alcohol use, gambling, and other activities. 
         The main characteristic of players measured by BART is the risk-taking propensity, which is often used in research. Read more about <a href="https://www.impulsivity.org/measurement/bart/" target="_blank">BART</a> and <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fa0014083" target="_blank">its reliability</a>.
@@ -21,7 +28,6 @@ The basic BART game goes as follows<br>
     <li>Players will play in multiple trials (10) in this implementation</li>
 </ul>
 <br>
-<br>
 
 <h2>Standard vs. Modified BART</h2>
 Standard BART is an implementation of BART where players can only pump their balloons by a factor of 1. In Modified BART, players have the chance to pump the balloon by multiple factors. At once, the maximum of which is the remaining number of pumps provided in the game.
@@ -29,7 +35,7 @@ Standard BART is an implementation of BART where players can only pump their bal
 <br>
 
 <h2>Data</h2>
-In this game, no personal data will be collected. Data collected includes the number of trials, the number of rewards accumulated, total reward accumulated, the number of trials completed, the number of pumps per pump (in modified BART), the current reward for the trial, and the state of the game (has the balloon popped, has the player cashed out).
+In this game, no personal data will be collected. Data collected includes the number of trials, the number of rewards accumulated, total reward accumulated, the number of trials completed, the number of pumps per pump-action (in modified BART), the current reward for the trial, and the state of the game (has the balloon popped, has the player cashed out).
 <br>
 The data is not passed to any third party and is stored and processed to show the distribution of actions and results from all players. The data collected in these games is not used for research or any other purposes except the display of overall information on the <a href="{% url 'landing-home' %}">home</a> page of this website.
 <br>

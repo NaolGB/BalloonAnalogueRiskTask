@@ -1,25 +1,30 @@
 {% extends 'main.html' %} 
+{% block title %}
+<div class='display-1'>
+    Instructions
+</div>
+<div class='fs-6 fw-light pb-3'>
+    The goal of this game is to earn as much money as possible
+</div>
+<div class='d-flex mb-3 gap-3 pt-5'>
+    
+</div>
+{% endblock title %}
 
 {% block content %}
-<h1>Instructions</h1>
-<br>
-<br>
-<strong>
-    <p>The goal of this game is to earn as much money as possible</p>
-</strong>
+<div>
+    <ol>
+        <li>You will be provided with a balloon and two actions per trial – the actions are pump (inflate) and cash out</li>
+        <li>If you decide to pump the balloon, the balloon will inflate once and the amount of money you can cash out increases. But, so <strong> does the probability that the balloon pops on the current or coming pumps</strong></li>
+        <li>If you decide to cash out, the amount of money you accumulated by pumping in the trial will be trasferred to the total reward which you will be able to take once all trials are completed</li>
+        <li>If the balloon pops before you cash out, you will loses all the money accumulated in that trial, but the total amount from the previous trials is not decreased</li>
+        <li>you will play for 10 trials</li>
+    </ol>
+</div>
 
-<ol>
-    <li>You will be provided with a balloon and two actions per trial – the actions are pump (inflate) and cash out</li>
-    <li>If you decide to pump the balloon, the balloon will inflate once and the amount of money you can cash out increases. But, so <strong> does the probability that the balloon pops on the current or coming pumps</strong></li>
-    <li>If you decide to cash out, the amount of money you accumulated by pumping in the trial will be trasferred to the total reward which you will be able to take once all trials are completed</li>
-    <li>If the balloon pops before you cash out, you will loses all the money accumulated in that trial, but the total amount from the previous trials is not decreased</li>
-    <li>you will play for 10 trials</li>
-</ol>
-<br>
-<br>
-
-<a class="btn btn-outline-dark" role="button" href="{% url 'bart-createExperiment' %}">
+<div class='pt-3'>
+    <a class="btn btn-outline-dark" role="button" href="{% url 'bart-createExperiment' %}">
         Start Playing
-</a>
-
-{% endblock %}
+    </a>
+</div>
+{% endblock content %}
